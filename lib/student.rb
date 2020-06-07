@@ -103,7 +103,8 @@ class Student
           WHERE grade = 10
           LIMIT 1;
         SQL
-        DB[:conn].execute(sql).new_from_db
+        ra = DB[:conn].execute(sql).map do |row|
+          ra.new_from_db(row)
         end
       end
 
