@@ -54,7 +54,6 @@ class Student
           sql = <<-SQL
             SELECT *
             FROM students
-            WHERE name = 9
           SQL
 
           DB[:conn].execute(sql).map do |row|
