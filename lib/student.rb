@@ -99,6 +99,7 @@ class Student
 
 
   def self.first_student_in_grade_10
+    binding.pry
         sql = <<-SQL
           SELECT *
           FROM students
