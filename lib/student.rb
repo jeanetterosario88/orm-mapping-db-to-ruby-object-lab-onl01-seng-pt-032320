@@ -82,6 +82,7 @@ class Student
         DB[:conn].execute(sql).map do |row|
           self.new_from_db(row)
       end
+    end
 
   def self.first_X_students_in_grade_10(lim)
       sql = <<-SQL
@@ -93,6 +94,7 @@ class Student
       DB[:conn].execute(sql, lim).map do |row|
         self.new_from_db(row)
     end
+  end
 
 
   def self.first_student_in_grade_10
@@ -105,6 +107,7 @@ class Student
         DB[:conn].execute(sql).map do |row|
           self.new_from_db(row)
       end
+    end
 
 
 
@@ -117,6 +120,7 @@ class Student
           DB[:conn].execute(sql, grd).map do |row|
             self.new_from_db(row)
         end
+      end
 
 
   def self.create_table
